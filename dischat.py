@@ -13,7 +13,7 @@ intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 
 async def get_steel_path_fissures():
-    url = 'https://api.warframestat.us/pc/fissures'
+    url = 'https://api.warframestat.us/pc/fissures/'
     async with aiohttp.ClientSession() as session:
         async with session.get(url, headers={"Accept": "application/json"}) as response:
             if response.status != 200:
